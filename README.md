@@ -110,7 +110,3 @@ flutter analyze
 flutter test
 flutter pub outdated
 ```
-
-## License
-
-This project is currently unlicensed.
