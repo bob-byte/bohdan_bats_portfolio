@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "712148588207",
+    "project_id": "bohdan-bats-portfolio",
+    "storage_bucket": "bohdan-bats-portfolio.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712148588207:android:1991d8e339c3a06724e65a",
+        "android_client_info": {
+          "package_name": "bohdanbats.com.bohdan_bats_portfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-oEs9EzgI9sICvEpLoVKlQ8_sPQKhgdc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
