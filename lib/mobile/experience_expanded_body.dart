@@ -30,16 +30,6 @@ class ExperienceExpandedBody extends StatelessWidget {
               ),
             ),
           ],
-          if (tags.isNotEmpty) ...[
-            const SizedBox(height: 12),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: tags
-                  .map((tag) => ExperienceTechChip(label: tag))
-                  .toList(),
-            ),
-          ],
           if (item.achievements.isNotEmpty) ...[
             const SizedBox(height: 12),
             ...item.achievements.map(
@@ -72,6 +62,16 @@ class ExperienceExpandedBody extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+          ],
+          if (tags.isNotEmpty) ...[
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: tags
+                  .map((tag) => ExperienceTechChip(label: tag))
+                  .toList(),
             ),
           ],
         ],

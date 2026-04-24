@@ -25,6 +25,7 @@ class ExperienceTimelineEntry extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final techTags = parseTechStack(item.techStack);
     return IntrinsicHeight(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -119,14 +120,6 @@ class ExperienceTimelineEntry extends StatelessWidget {
                       ),
                     ),
                   ],
-                  const SizedBox(height: 14),
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 8,
-                    children: parseTechStack(
-                      item.techStack,
-                    ).map((tag) => ExperienceTechChip(label: tag)).toList(),
-                  ),
                   if (item.achievements.isNotEmpty) ...[
                     const SizedBox(height: 14),
                     ...item.achievements.map(
@@ -159,6 +152,16 @@ class ExperienceTimelineEntry extends StatelessWidget {
                           ],
                         ),
                       ),
+                    ),
+                  ],
+                  if (techTags.isNotEmpty) ...[
+                    const SizedBox(height: 14),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: techTags
+                          .map((tag) => ExperienceTechChip(label: tag))
+                          .toList(),
                     ),
                   ],
                   if (!isLast) const SizedBox(height: _spacingBeforeNextEntry),
