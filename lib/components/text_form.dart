@@ -1,7 +1,6 @@
 import 'package:bohdan_bats_portfolio/components/sans.dart';
 import 'package:bohdan_bats_portfolio/app_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TextForm extends StatelessWidget {

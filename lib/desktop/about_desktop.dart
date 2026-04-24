@@ -2,7 +2,6 @@ import 'package:bohdan_bats_portfolio/app_constants.dart';
 import 'package:bohdan_bats_portfolio/components/all_my_skills.dart';
 import 'package:bohdan_bats_portfolio/components/animated_card.dart';
 import 'package:bohdan_bats_portfolio/components/my_avatar.dart';
-import 'package:bohdan_bats_portfolio/components/my_social_media.dart';
 import 'package:bohdan_bats_portfolio/components/sans.dart';
 import 'package:bohdan_bats_portfolio/components/sans_bold.dart';
 import 'package:bohdan_bats_portfolio/desktop/all_desktop_tabs.dart';

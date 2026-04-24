@@ -1,15 +1,11 @@
 import 'package:bohdan_bats_portfolio/components/all_my_skills.dart';
 import 'package:bohdan_bats_portfolio/components/animated_card.dart';
-import 'package:bohdan_bats_portfolio/components/my_social_media.dart';
 import 'package:bohdan_bats_portfolio/components/sans.dart';
 import 'package:bohdan_bats_portfolio/components/sans_bold.dart';
 import 'package:bohdan_bats_portfolio/app_constants.dart';
-import 'package:bohdan_bats_portfolio/components/text_form.dart';
 import 'package:bohdan_bats_portfolio/mobile/contact_me_form_mobile.dart';
 import 'package:bohdan_bats_portfolio/mobile/drawer_mobile.dart';
-import 'package:bohdan_bats_portfolio/mobile/tab_mobile.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LandingPageMobile extends StatefulWidget {
   const LandingPageMobile({super.key});
@@ -19,24 +15,8 @@ class LandingPageMobile extends StatefulWidget {
 }
 
 class _LandingPageMobileState extends State<LandingPageMobile> {
-  Container tealContainer(String text) {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: AppConstants.primaryColor,
-          style: BorderStyle.solid,
-          width: 2,
-        ),
-        borderRadius: BorderRadius.circular(5),
-      ),
-      padding: EdgeInsets.all(7),
-      child: Text(text, style: GoogleFonts.openSans(fontSize: 15)),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    double widthDevice = MediaQuery.of(context).size.width;
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: AppConstants.surfaceColor,

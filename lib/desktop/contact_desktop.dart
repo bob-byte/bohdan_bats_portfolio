@@ -1,13 +1,8 @@
 import 'package:bohdan_bats_portfolio/app_constants.dart';
-import 'package:bohdan_bats_portfolio/components/my_social_media.dart';
-import 'package:bohdan_bats_portfolio/components/sans_bold.dart';
 import 'package:bohdan_bats_portfolio/desktop/all_desktop_tabs.dart';
 import 'package:bohdan_bats_portfolio/desktop/contact_me_form_desktop.dart';
 import 'package:bohdan_bats_portfolio/desktop/drawer_desktop.dart';
-import 'package:bohdan_bats_portfolio/desktop/tab_desktop.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ContactDesktop extends StatefulWidget {
   const ContactDesktop({super.key});
@@ -21,7 +16,7 @@ class _ContactDesktopState extends State<ContactDesktop> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: DrawerDesktop(),
-      backgroundColor: Colors.white,
+      backgroundColor: AppConstants.surfaceColor,
       body: NestedScrollView(
         headerSliverBuilder: (context, innterBoxIsScrolled) {
           return <Widget>[

@@ -32,6 +32,7 @@ class _BlogMobileState extends State<BlogMobile> {
     }
   }
 
+  @override
   void initState() {
     super.initState();
     streamArticle();
@@ -42,7 +43,7 @@ class _BlogMobileState extends State<BlogMobile> {
     return SafeArea(
       child: Scaffold(
         extendBodyBehindAppBar: true,
-        backgroundColor: Colors.white,
+        backgroundColor: AppConstants.surfaceColor,
         endDrawer: DrawerMobile(),
         body: NestedScrollView(
           headerSliverBuilder: (context, builder) {

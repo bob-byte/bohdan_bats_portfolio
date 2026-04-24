@@ -17,7 +17,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
     double widthDevice = MediaQuery.of(context).size.width;
     return Scaffold(
       drawer: DrawerDesktop(),
-      backgroundColor: Colors.white,
+      backgroundColor: AppConstants.surfaceColor,
       body: NestedScrollView(
         headerSliverBuilder: (context, innterBoxIsScrolled) {
           return <Widget>[

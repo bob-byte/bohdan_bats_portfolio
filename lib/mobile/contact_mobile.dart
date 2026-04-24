@@ -1,5 +1,4 @@
 import 'package:bohdan_bats_portfolio/app_constants.dart';
-import 'package:bohdan_bats_portfolio/components/sans_bold.dart';
 import 'package:bohdan_bats_portfolio/mobile/contact_me_form_mobile.dart';
 import 'package:bohdan_bats_portfolio/mobile/drawer_mobile.dart';
 import 'package:flutter/material.dart';
