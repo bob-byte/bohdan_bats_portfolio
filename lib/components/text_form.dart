@@ -10,6 +10,7 @@ class TextForm extends StatelessWidget {
   final String hitText;
   final int? maxLines;
   final TextEditingController? controller;
+  final FormFieldValidator<String>? validator;
 
   const TextForm({
     super.key,
@@ -18,6 +19,7 @@ class TextForm extends StatelessWidget {
     required this.hitText,
     this.maxLines,
     this.controller,
+    this.validator,
   });
 
   @override
@@ -31,24 +33,28 @@ class TextForm extends StatelessWidget {
         SizedBox(
           width: containerWidth,
           child: TextFormField(
+            validator: validator,
             controller: controller,
-            inputFormatters: [
-              LengthLimitingTextInputFormatter(10),
-              FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9]')),
-            ],
             maxLines: maxLines ?? 1,
             decoration: InputDecoration(
-              focusedErrorBorder: OutlineInputBorder(
+              errorBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: AppConstants.errorColor),
                 borderRadius: BorderRadius.all(Radius.circular(10)),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: AppConstants.errorColor),
+                borderRadius: BorderRadius.all(Radius.circular(15)),
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: AppConstants.accentColor),
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppConstants.primaryColor, width: 2),
-                borderRadius: BorderRadius.all(Radius.circular(15.2)),
+                borderSide: BorderSide(
+                  color: AppConstants.primaryColor,
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(15)),
               ),
               hintText: hitText,
               hintStyle: GoogleFonts.poppins(fontSize: 14),

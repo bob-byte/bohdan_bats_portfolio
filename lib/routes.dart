@@ -1,11 +1,13 @@
 import "package:bohdan_bats_portfolio/desktop/about_desktop.dart";
 import "package:bohdan_bats_portfolio/desktop/blog_desktop.dart";
 import "package:bohdan_bats_portfolio/desktop/contact_desktop.dart";
+import "package:bohdan_bats_portfolio/desktop/experience_desktop.dart";
 import "package:bohdan_bats_portfolio/desktop/landing_page_desktop.dart";
 import "package:bohdan_bats_portfolio/desktop/projects_desktop.dart";
 import "package:bohdan_bats_portfolio/mobile/blog_mobile.dart";
 import "package:bohdan_bats_portfolio/mobile/contact_mobile.dart";
 import "package:bohdan_bats_portfolio/mobile/about_mobile.dart";
+import "package:bohdan_bats_portfolio/mobile/experience_mobile.dart";
 import "package:bohdan_bats_portfolio/mobile/landing_page_mobile.dart";
 import "package:bohdan_bats_portfolio/mobile/projects_mobile.dart";
 import "package:flutter/material.dart";
@@ -87,6 +89,22 @@ class Routes {
                   return ProjectsDesktop();
                 } else {
                   return ProjectsMobile();
+                }
+              },
+            ),
+          );
+        }
+
+      case "/experience":
+        {
+          return MaterialPageRoute(
+            settings: settings,
+            builder: (_) => LayoutBuilder(
+              builder: (context, constraints) {
+                if (constraints.maxWidth > 800) {
+                  return ExperienceDesktop();
+                } else {
+                  return ExperienceMobile();
                 }
               },
             ),

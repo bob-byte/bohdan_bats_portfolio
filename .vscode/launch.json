@@ -30,7 +30,7 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "debug",
-            "deviceId": "ios simulator"
+            "preLaunchTask": "Start iOS Simulator"
         },
         {
             "name": "bohdan_bats_portfolio (Android)",
