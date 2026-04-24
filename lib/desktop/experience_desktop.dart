@@ -209,6 +209,7 @@ class _TimelineEntry extends StatelessWidget {
 
   static const double _logoSize = 56;
   static const double _railWidth = 72;
+
   /// Vertical gap before the next entry; kept inside this row so the timeline
   /// rail’s line runs through it (no “cut” between icons).
   static const double _spacingBeforeNextEntry = 36;
@@ -236,7 +237,10 @@ class _TimelineEntry extends StatelessWidget {
                   Expanded(
                     child: Align(
                       alignment: Alignment.topCenter,
-                      child: Container(width: 2, color: AppConstants.borderColor),
+                      child: Container(
+                        width: 2,
+                        color: AppConstants.borderColor,
+                      ),
                     ),
                   ),
               ],
@@ -310,9 +314,9 @@ class _TimelineEntry extends StatelessWidget {
                   Wrap(
                     spacing: 8,
                     runSpacing: 8,
-                    children: _techTags(item.techStack)
-                        .map((tag) => _TechChip(label: tag))
-                        .toList(),
+                    children: _techTags(
+                      item.techStack,
+                    ).map((tag) => _TechChip(label: tag)).toList(),
                   ),
                   if (item.achievements.isNotEmpty) ...[
                     const SizedBox(height: 14),
@@ -348,8 +352,7 @@ class _TimelineEntry extends StatelessWidget {
                       ),
                     ),
                   ],
-                  if (!isLast)
-                    const SizedBox(height: _spacingBeforeNextEntry),
+                  if (!isLast) const SizedBox(height: _spacingBeforeNextEntry),
                 ],
               ),
             ),
@@ -443,10 +446,7 @@ class _CompanyLink extends StatelessWidget {
   final String name;
   final String url;
 
-  const _CompanyLink({
-    required this.name,
-    required this.url,
-  });
+  const _CompanyLink({required this.name, required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -468,8 +468,6 @@ class _CompanyLink extends StatelessWidget {
                   fontSize: 15,
                   fontWeight: FontWeight.w600,
                   color: AppConstants.linkColor,
-                  decoration: TextDecoration.underline,
-                  decorationColor: AppConstants.linkColor,
                 ),
               ),
             ),
@@ -503,28 +501,11 @@ class _SummaryBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const _SummaryColumn(
-            value: '5+',
-            label: 'Years Experience',
-          ),
-          Container(
-            width: 1,
-            height: 48,
-            color: AppConstants.borderColor,
-          ),
-          const _SummaryColumn(
-            value: '4',
-            label: 'Companies',
-          ),
-          Container(
-            width: 1,
-            height: 48,
-            color: AppConstants.borderColor,
-          ),
-          _SummaryColumn(
-            value: techDisplay,
-            label: 'Technologies',
-          ),
+          const _SummaryColumn(value: '5+', label: 'Years Experience'),
+          Container(width: 1, height: 48, color: AppConstants.borderColor),
+          const _SummaryColumn(value: '4', label: 'Companies'),
+          Container(width: 1, height: 48, color: AppConstants.borderColor),
+          _SummaryColumn(value: techDisplay, label: 'Technologies'),
         ],
       ),
     );
@@ -535,10 +516,7 @@ class _SummaryColumn extends StatelessWidget {
   final String value;
   final String label;
 
-  const _SummaryColumn({
-    required this.value,
-    required this.label,
-  });
+  const _SummaryColumn({required this.value, required this.label});
 
   @override
   Widget build(BuildContext context) {
