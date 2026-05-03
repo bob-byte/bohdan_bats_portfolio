@@ -3,6 +3,7 @@ import 'package:bohdan_bats_portfolio/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:window_manager/window_manager.dart';
 
 void main() async {
@@ -21,6 +22,7 @@ void main() async {
     await windowManager.setSize(const Size(920, 800));
   }
 
+  GoogleFonts.config.allowRuntimeFetching = false;
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(const MyApp());

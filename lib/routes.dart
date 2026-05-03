@@ -1,16 +1,16 @@
 import "package:bohdan_bats_portfolio/app/responsive_layout.dart";
-import "package:bohdan_bats_portfolio/desktop/about_desktop.dart";
-import "package:bohdan_bats_portfolio/desktop/blog_desktop.dart";
-import "package:bohdan_bats_portfolio/desktop/contact_desktop.dart";
-import "package:bohdan_bats_portfolio/desktop/experience_desktop.dart";
-import "package:bohdan_bats_portfolio/desktop/landing_page_desktop.dart";
-import "package:bohdan_bats_portfolio/desktop/projects_desktop.dart";
-import "package:bohdan_bats_portfolio/mobile/about_mobile.dart";
-import "package:bohdan_bats_portfolio/mobile/blog_mobile.dart";
-import "package:bohdan_bats_portfolio/mobile/contact_mobile.dart";
-import "package:bohdan_bats_portfolio/mobile/experience_mobile.dart";
-import "package:bohdan_bats_portfolio/mobile/landing_page_mobile.dart";
-import "package:bohdan_bats_portfolio/mobile/projects_mobile.dart";
+import "package:bohdan_bats_portfolio/views/desktop/about_desktop.dart";
+import "package:bohdan_bats_portfolio/views/desktop/blog_desktop.dart";
+import "package:bohdan_bats_portfolio/views/desktop/contact_desktop.dart";
+import "package:bohdan_bats_portfolio/views/desktop/experience_desktop.dart";
+import "package:bohdan_bats_portfolio/views/desktop/landing_page_desktop.dart";
+import "package:bohdan_bats_portfolio/views/desktop/projects_desktop.dart";
+import "package:bohdan_bats_portfolio/views/mobile/about_mobile.dart";
+import "package:bohdan_bats_portfolio/views/mobile/blog_mobile.dart";
+import "package:bohdan_bats_portfolio/views/mobile/contact_mobile.dart";
+import "package:bohdan_bats_portfolio/views/mobile/experience_mobile.dart";
+import "package:bohdan_bats_portfolio/views/mobile/landing_page_mobile.dart";
+import "package:bohdan_bats_portfolio/views/mobile/projects_mobile.dart";
 import "package:flutter/material.dart";
 
 class Routes {
